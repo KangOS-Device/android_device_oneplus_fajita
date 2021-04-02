@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/evolution_fajita.mk
+    $(LOCAL_DIR)/kangos_fajita.mk
 
 COMMON_LUNCH_CHOICES := \
-    evolution_fajita-user \
-    evolution_fajita-userdebug \
-    evolution_fajita-eng
+    kangos_fajita-user \
+    kangos_fajita-userdebug \
+    kangos_fajita-eng

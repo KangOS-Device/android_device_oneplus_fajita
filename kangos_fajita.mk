@@ -21,27 +21,28 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from fajita device
 $(call inherit-product, device/oneplus/fajita/device.mk)
 
-# Inherit some common Evolution X stuff.
-$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
+# Inherit some common KangOS stuff.
+$(call inherit-product, vendor/kangos/config/common.mk)
 
 # Official
-EVO_BUILD_TYPE := OFFICIAL
+KANGOS_BUILDTYPE := OFFICIAL
 
 # Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Gapps
 TARGET_GAPPS_ARCH := arm64
-TARGET_INCLUDE_WIFI_EXT := true
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_INCLUDE_STOCK_ARCORE := true
-WITH_GAPPS := true
+USE_GAPPS := true
 
 # FOD Animation
 EXTRA_FOD_ANIMATIONS := true
 
+# Maintainer
+PRODUCT_PRODUCT_PROPERTIES += \
+  ro.kangos.maintainer=Chandu
+
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := evolution_fajita
+PRODUCT_NAME := kangos_fajita
 PRODUCT_DEVICE := fajita
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
